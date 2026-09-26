@@ -6,9 +6,11 @@ The task is to predict the net hourly electrical output of the plant (PE, in MW)
 temperature (AT), exhaust vacuum (V), ambient pressure (AP) and relative humidity (RH).
 There are 9568 hourly readings from 2006-2011 with the plant running at full load.
 
-All the work is in [HW2_CCPP.ipynb](HW2_CCPP.ipynb). It's already run, so the outputs and plots show up on GitHub.
+All the work is in [Last_First_HW2.ipynb](Last_First_HW2.ipynb), which is the notebook to grade. It's already run, so the outputs and plots show up on GitHub.
 
 ## What's in the notebook
+
+Problem 1: Combined Cycle Power Plant
 
 - (b) data size, pairwise scatterplots, summary stats
 - (c) simple linear regression for each predictor + outliers
@@ -20,6 +22,20 @@ All the work is in [HW2_CCPP.ipynb](HW2_CCPP.ipynb). It's already run, so the ou
 - (i) KNN regression for k = 1 to 100, raw vs normalized features
 - (j) KNN vs linear regression
 - extra: 5x2 CV paired t-test using all 5 shuffled sheets (the dataset readme mentions this)
+
+Problem 2: ISLR 2.4.1 (flexible vs inflexible methods)
+
+- (a) large n, small p: flexible is better
+- (b) large p, small n: flexible is worse
+- (c) highly non-linear f: flexible is better
+- (d) high Var(ε): flexible is worse
+
+Problem 3: ISLR 2.4.7 (KNN by hand)
+
+- (a) distances to the origin: 3, 2, √10, √5, √2, √3
+- (b) K = 1: Green (obs 5)
+- (c) K = 3: Red (obs 5, 6, 2 vote Green, Red, Red)
+- (d) non-linear Bayes boundary: small K
 
 ## Results
 
@@ -46,7 +62,7 @@ Some things I found:
 
 ```
 pip install -r requirements.txt
-jupyter notebook HW2_CCPP.ipynb
+jupyter notebook Last_First_HW2.ipynb
 ```
 
 The notebook reads `Folds5x2_pp.xlsx` from the same folder and saves plots to `figures/`.
